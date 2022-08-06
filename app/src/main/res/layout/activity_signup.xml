@@ -71,18 +71,19 @@
             android:textColorHint="#c4c4c4" />
 
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_login"
+        <EditText
+            android:id="@+id/et_password_input_comfirm"
+            android:background="@drawable/button_textedit"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="24dp"
-            android:background="#d8d8d8"
-            android:text="로그인"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:theme="@style/Widget.AppCompat.Button" />
+            android:paddingLeft="8dp"
+            android:hint=" 패스워드 확인"
+            android:textSize="12sp"
+            android:inputType="textPassword"
+            android:textColorHint="#c4c4c4" />
 
 
         <androidx.appcompat.widget.AppCompatButton
@@ -93,7 +94,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginRight="24dp"
             android:background="@drawable/button_login"
-            android:text="회원가입"
+            android:text="가입하기"
             android:textColor="#bde0834e"
             android:textStyle="bold" />
 
