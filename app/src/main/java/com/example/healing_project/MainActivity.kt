@@ -3,20 +3,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.healing_project.R
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_feeling.*
 import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var scheduleRecyclerViewAdapter: RecyclerViewAdapter
+    //lateinit var datas : TodayData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initView()
+        //datas = intent.getSerializableExtra("data") as TodayData
+
+        //Glide.with(this).load(datas.image).into(feeling)
+        //time_log.text = datas.time
     }
 
     fun initView() {
@@ -38,7 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun refreshCurrentMonth(calendar: Calendar) {
-        val sdf = SimpleDateFormat("yyyy MM", Locale.KOREAN)
+        val sdf = SimpleDateFormat("yyyy. MM", Locale.KOREAN)
         tv_current_month.text = sdf.format(calendar.time)
     }
 }

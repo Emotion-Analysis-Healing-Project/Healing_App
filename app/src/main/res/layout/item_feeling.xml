@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:gravity="center_vertical|center"
+    android:layout_marginBottom="8dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/time_log"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="18:34"
+        android:textColor="#bdd04b00"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/feeling"
+        android:layout_width="30dp"
+        android:layout_marginLeft="100dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>
