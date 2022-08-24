@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    tools:context=".MainActivity"
     android:orientation="vertical" >
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -198,12 +199,14 @@
         tools:ignore="MissingConstraints">
 
         <ImageButton
+            android:id="@+id/light_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:src="@drawable/light" />
 
         <ImageButton
+            android:id="@+id/video_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="82dp"

@@ -6,7 +6,7 @@
     android:layout_width="360dp"
     android:layout_gravity="center_horizontal"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".SignupActivity"
     android:background="@color/white">
 
     <LinearLayout
@@ -23,7 +23,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/img_AppLogo"
             android:layout_width="68dp"
             android:layout_height="68dp"
             android:layout_marginLeft="146dp"

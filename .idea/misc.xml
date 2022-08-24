@@ -8,10 +8,11 @@
         <entry key="app/src/main/res/drawable/day_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2145" />
         <entry key="app/src/main/res/drawable/ic_pre.xml" value="0.12" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.28023559570312495" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2581699346405229" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.27708333333333335" />
-        <entry key="app/src/main/res/layout/activity_today.xml" value="0.24653739612188366" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.24313725490196078" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4164588528678304" />
+        <entry key="app/src/main/res/layout/activity_model.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.27312775330396477" />
+        <entry key="app/src/main/res/layout/activity_today.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_cal.xml" value="0.12273550724637682" />
         <entry key="app/src/main/res/layout/item_empty.xml" value="0.1286231884057971" />
         <entry key="app/src/main/res/layout/item_feeling.xml" value="0.23324275362318841" />
@@ -19,6 +20,7 @@
         <entry key="app/src/main/res/layout/login.xml" value="0.1770516717325228" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1286231884057971" />
       </map>
     </option>
   </component>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "413782072932",
+    "project_id": "emotion-b0c2f",
+    "storage_bucket": "emotion-b0c2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413782072932:android:22ac5c0315027c10278971",
+        "android_client_info": {
+          "package_name": "com.company.healing_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413782072932-7ssblak6p7mer470m902a3mjfv2povjh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFtzv3q_lz9Y9ZBfCnMWmj-AyB1xrT_2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413782072932-7ssblak6p7mer470m902a3mjfv2povjh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
