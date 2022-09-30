@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/network_security_config">
-        <activity android:name=".LoginActivity"
+        <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,9 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignupActivity"
-            android:parentActivityName=".LoginActivity">
-        </activity>
-        <activity android:name=".MainActivity"
             android:parentActivityName=".LoginActivity">
         </activity>
         <activity android:name=".TodayActivity"

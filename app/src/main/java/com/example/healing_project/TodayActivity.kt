@@ -1,30 +1,44 @@
 package com.example.healing_project
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
+import android.media.Image
 import android.net.Uri
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.util.Log
+import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.healing_project.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_today.*
 import kotlinx.android.synthetic.main.activity_today.img_AppLogo
-import kotlinx.android.synthetic.main.item_feeling.*
 import java.util.*
 
 class TodayActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var cAdapter: TodayRecyclerViewAdapter
     lateinit var datas : TodayData
+    lateinit var imageIv:ImageView
+    lateinit var storage: FirebaseStorage
+    var images : ArrayList<Image> = ArrayList()
 
+    companion object{
+    }
+
+    // Create a storage reference from our app
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_today)
 
-        cAdapter = TodayRecyclerViewAdapter()
-        item_list.adapter=cAdapter
+        //cAdapter = TodayRecyclerViewAdapter()
+        //item_list.adapter=cAdapter
 
         img_AppLogo.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -38,5 +52,10 @@ class TodayActivity : AppCompatActivity() {
             startActivity(intent)
             Log.d("태그", "내용 : "+random_index)
         }
+
+
     }
 }
+
+//모델 클래스 정의: 기타 원하는 데이터를 추가 할 수 있다.
+data class Image(val imageUrl: String)

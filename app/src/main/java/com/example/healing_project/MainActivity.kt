@@ -17,7 +17,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.healing_project.databinding.ActivityMainBinding
+import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_today.*
 import kotlinx.android.synthetic.main.item_feeling.*
 import kotlinx.android.synthetic.main.item_schedule.*
 import java.io.*
@@ -42,8 +44,10 @@ class MainActivity : AppCompatActivity() {
     private val networkWriter: PrintWriter? = null
     private var dos: DataOutputStream? = null
     private var dis: DataInputStream? = null
-    private val ip = "192.168.200.143" // IP 번호
+    private val ip = "192.168.15.127" // IP 번호
     private val port = 9999 // port 번호
+    lateinit var storage: FirebaseStorage
+
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,6 +66,15 @@ class MainActivity : AppCompatActivity() {
         light_button.setOnClickListener {
             connect()
         }
+
+        storage = FirebaseStorage.getInstance()
+        val gsReference = storage.getReferenceFromUrl("gs://emotion-b0c2f.appspot.com/User1_id/20220930/face_20220930_165625.jpg")
+
+        //AppGlideModule.kt 파일을 만들어 주고 clear project와 rebuild project를 해줘야 사용이 가능했다. 관련 이야기가 분분하다.
+        GlideApp.with(this)
+            .load(gsReference)
+            .fitCenter()
+            .into(imageViewss)
 
     }
 
@@ -106,7 +119,7 @@ class MainActivity : AppCompatActivity() {
         val checkUpdate: Thread = object : Thread() {
             override fun run() {
                 // ip받기
-                val newip = "192.168.45.106"
+                val newip = "192.168.15.127"
                 var line = 1
                 // 서버 접속
                 try {
@@ -158,6 +171,7 @@ class MainActivity : AppCompatActivity() {
         }
         // 소켓 접속 시도, 버퍼생성
         checkUpdate.start()
+
     }
 
 }

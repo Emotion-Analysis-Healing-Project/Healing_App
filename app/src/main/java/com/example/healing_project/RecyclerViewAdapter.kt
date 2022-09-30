@@ -52,7 +52,7 @@ class RecyclerViewAdapter(val mainActivity: MainActivity) : RecyclerView.Adapter
         holder.itemView.setOnClickListener {
             //itemClickListener.onClick(it, position)
             val intent = Intent(holder.itemView?.context, TodayActivity::class.java)
-            ContextCompat.startActivity(holder.itemView?.context, intent,null)
+            holder.itemView?.context?.let { it1 -> ContextCompat.startActivity(it1, intent,null) }
         }
 
     }

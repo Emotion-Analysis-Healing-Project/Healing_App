@@ -204,6 +204,12 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:src="@drawable/light" />
+        <ImageView
+            android:id="@+id/imageViewss"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="40dp"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
 
         <ImageButton
             android:id="@+id/video_button"
